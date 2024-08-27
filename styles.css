@@ -1,0 +1,140 @@
+/* Reset and Basic Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 15px;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.content img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.container {
+    position:relative;
+    text-align:bottom;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.dialog-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%; /* Buttons take up 45% of the container width */
+    box-sizing: border-box;
+}
+
+#yesBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#noBtn {
+    background-color: #f44336;
+    color: white;
+    position: relative;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dialog-box {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+        width: 100%; /* Buttons stack vertically on mobile */
+        margin: 10px 0;
+    }
+
+    .container {
+        top: 40%; /* Adjust dialog box position for smaller screens */
+        transform: translate(-50%, -40%);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 95%;
+    }
+}
